@@ -34,5 +34,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   Dbt_Training:
     # Applies to all files under models/example/
-    example:
-      materialized: view
+    stage:
+      materialized: table
+      database: DBT
