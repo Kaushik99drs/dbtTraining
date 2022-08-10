@@ -3,4 +3,5 @@
     database= 'DBT' 
 )}}
 
-SELECT * FROM "DBT"."RAW_SOURCE"."ORDERS"
+SELECT * 
+FROM {{ source('RAW_SOURCE', 'ORDERS') }}
