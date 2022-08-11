@@ -37,3 +37,6 @@ models:
     stage:
       materialized: table
       database: DBT
+    publish:
+      materialized: table
+      database: DBT  
