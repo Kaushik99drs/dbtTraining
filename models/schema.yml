@@ -6,9 +6,11 @@ sources:
     tables:
       - name: CUSTOMER
       - name: ORDERS
+      - name: SUPPLIER
   - name: STAGE
     description: This is RAW_TEST Database Source Tables used for creating STANDARD_TEST Layer
     database: DBT
     tables:
       - name: CUSTOMER
       - name: ORDERS
+      - name: SUPPLIER
