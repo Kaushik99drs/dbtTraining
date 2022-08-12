@@ -1,9 +1,13 @@
 {{ config( alias= 'customer',
     schema= 'STAGE',
-    database= 'DBT' 
+    database= 'DBT',
+    unique_key= 'C_CUSTKEY',
+    incremental_strategy= 'merge'
 )}}
 
 SELECT * 
 FROM {{ source('RAW_SOURCE', 'CUSTOMER') }}
-where C_NATIONKEY not in (14)
- 
+
+{% if is_incremental() %}
+where C_CUSTKEY > (select max(C_CUSTKEY) from {{ this }})
+{% endif %} 
