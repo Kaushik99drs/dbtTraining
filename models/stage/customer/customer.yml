@@ -9,6 +9,9 @@ models:
         tests:
           - unique
           - not_null
+          - relationships:
+              to: ref('ORDERS')
+              field: O_CUSTKEY         
       - name: C_NATIONKEY
         tests:
           - not_null
