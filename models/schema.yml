@@ -6,6 +6,11 @@ sources:
     tables:
       - name: CUSTOMER
       - name: ORDERS
+      - name: LINEITEM
+      - name: NATION
+      - name: PART
+      - name: PARTSUPP
+      - name: REGION
       - name: SUPPLIER
   - name: STAGE
     description: This is RAW_TEST Database Source Tables used for creating STANDARD_TEST Layer
@@ -13,4 +18,9 @@ sources:
     tables:
       - name: CUSTOMER
       - name: ORDERS
+      - name: LINEITEM
+      - name: NATION
+      - name: PART
+      - name: PARTSUPP
+      - name: REGION
       - name: SUPPLIER

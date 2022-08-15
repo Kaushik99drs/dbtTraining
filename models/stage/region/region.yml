@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: region
+    description: "{{ doc('REGION_docs') }}"
+    database: DBT
+    schema: STAGE
+    
+    columns:
+      - name: R_REGIONKEY
+        tests:
+          - not_null
+          - unique
