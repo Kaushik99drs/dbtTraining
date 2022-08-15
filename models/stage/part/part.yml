@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: part
+    description: "{{ doc('PART_docs') }}"
+    database: DBT
+    schema: STAGE
+    
+    columns:
+      - name: P_PARTKEY
+        tests:
+          - not_null
+          - unique

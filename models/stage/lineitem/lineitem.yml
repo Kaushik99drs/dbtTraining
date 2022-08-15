@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: lineitem
+    description: "{{ doc('LINEITEM_docs') }}"
+    database: DBT
+    schema: STAGE
+    
+    columns:
+      - name: L_SUPPKEY
+        tests:
+          - not_null
+      - name: L_PARTKEY
+        tests:
+          - not_null
+      - name: L_ORDERKEY
+        tests:
+          - not_null  
+          
+          

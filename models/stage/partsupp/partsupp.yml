@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: partsupp
+    description: "{{ doc('PARTSUPP_docs') }}"
+    database: DBT
+    schema: STAGE
+    
+    columns:
+      - name: PS_PARTKEY
+        tests:
+          - not_null
+      - name: PS_SUPPKEY
+        tests:
+          - not_null
+       
+          
+          
